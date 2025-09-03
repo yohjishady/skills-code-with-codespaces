@@ -18,6 +18,11 @@ permissions:
   contents: write
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      FILE: index.html          # ここは実際のファイル名に合わせてください
+      SEARCH: Hello             # ここは探したい文字列に合わせてください
   # Get the current step to only run the main job when the learner is on the same step.
   get_current_step:
     name: Check current step number
